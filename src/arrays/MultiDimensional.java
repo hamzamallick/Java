@@ -17,4 +17,11 @@ public class MultiDimensional {
             {7,8,9}
 
     };
+
+    int[][] arr1  = { // it can be also like this
+            {1,2,3,4},
+            {5,6},
+            {7,8,9}
+
+    };
 }
