@@ -19,8 +19,17 @@ public class BinarySearch {
 
 
 //        System.out.println(binarySearch2(arrayAsc,100));
-        System.out.println(binarySearch2(arrayAsc,100));
+//        System.out.println(binarySearch2(arrayAsc,100));
 
+
+//        System.out.println(insert(arrayAsc,96));
+
+
+        int misarr[] = {9,6,4,2,3,5,7,0,1,10,8};
+
+
+
+        System.out.println(missingNumber(misarr));
 
     }
 
@@ -41,9 +50,9 @@ public class BinarySearch {
             int mid = start + (end - start) / 2;
 
             if (target < arr[mid]) {
-                start = mid + 1;
-            } else if (target > arr[mid]) {
                 end = mid - 1;
+            } else if (target > arr[mid]) {
+                start = mid + 1;
 
             } else {
                 return mid;
@@ -139,6 +148,57 @@ public class BinarySearch {
 
 
         return -1;
+
+    }
+
+
+    //Q- search for the element and if not found return the index where it will be suitable place
+
+    static int insert(int[] arr, int target){
+
+        if (arr.length == 0) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            //find the middle element
+
+//            int mid = (start+end)/2; //but this may exceed the int value we will little bit modify this formula
+
+            int mid = start + (end - start) / 2;
+
+            if (target < arr[mid]) {
+                end = mid - 1;
+            } else if (target > arr[mid]) {
+                start = mid + 1;
+
+            } else {
+                return mid;
+            }
+        }
+
+        return start;
+
+
+    }
+
+
+    static int missingNumber(int[] nums) {
+
+
+        int l = nums.length;
+        int n = l*(l+1)/2;
+
+        for (int i = 0; i < nums.length; i++) {
+            n = n-nums[i];
+
+        }
+
+
+        return n;
 
     }
 
