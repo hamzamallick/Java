@@ -3,33 +3,34 @@ package searching;
 
 public class LeetCodeQuestions {
 
-   public static void main(String[] args){
+    public static void main(String[] args) {
 
-   }
+    }
 
 
+    //Q34-> first and last position of the element
     public int[] searchRange(int[] nums, int target) {
 
         if (nums.length == 0) {
-            return new int[] {-1,-1};
+            return new int[]{-1, -1};
         }
 
-        int[] ans = {-1,-1};
+        int[] ans = {-1, -1};
 
-       int start = search(nums,target,true);
-       int end = search(nums,target,false);
-       ans[0] = start;
-       ans[1] = end;
-       return ans;
+        int start = search(nums, target, true);
+        int end = search(nums, target, false);
+        ans[0] = start;
+        ans[1] = end;
+        return ans;
 
 
     }
 
     // this function will just return the index value of the target
 
-    int search(int[] nums, int target, boolean findStartIndes){
+    int search(int[] nums, int target, boolean findStartIndes) {
 
-       int ans = -1;
+        int ans = -1;
 
         int start = 0;
         int end = nums.length - 1;
@@ -46,10 +47,10 @@ public class LeetCodeQuestions {
             } else {
 
                 ans = mid;
-                if (findStartIndes ){
-                    end = mid -1;
-                }else {
-                    start = mid+1;
+                if (findStartIndes) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
                 }
 
             }
@@ -58,6 +59,12 @@ public class LeetCodeQuestions {
         return ans;
 
     }
+
+
+
+
+
+
 
 
 }
