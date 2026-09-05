@@ -16,10 +16,10 @@ public class BsQuestions {
 ////        System.out.println(floor(celaray,4));
 
 
-        int[] array = {3, 5, 20, 25, 30, 33, 49, 51, 67, 69, 60, 34,25, 10, 9, 7, 6, 1};
+//        int[] array = {3, 5, 20, 25, 30, 33, 49, 51, 67, 69, 60, 34,25, 10, 9, 7, 6, 1};
 
 //        System.out.println(peak(array));
-        System.out.println(findMount(array, 10));
+//        System.out.println(findMount(array, 10));
 
 
     }
