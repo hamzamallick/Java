@@ -6,8 +6,9 @@ public class Selection {
 
     static void main(String[] args) {
 
-        int[] array = {4,2,8,1,0,5};
+        int[] array = {2,2,1,1,1,1,1,1,1,2,2};
         Selection(array);
+        System.out.println(majority(array));
 
     }
 
@@ -46,5 +47,17 @@ public class Selection {
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
+    }
+
+
+    //Q-> Finding the majority element
+    static int majority(int[] nums){
+
+
+        int mid = nums.length / 2;
+
+        int candidate = nums[mid];
+
+        return candidate;
     }
 }
